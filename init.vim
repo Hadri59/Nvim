@@ -7,6 +7,9 @@
 :set softtabstop=4
 :set mouse=a
 :set completeopt=noinsert,menuone,noselect
+" :set cc=80
+:set nocompatible
+
 
 call plug#begin()
 
@@ -27,6 +30,10 @@ let g:NERDTreeDirArrowCollapsible = '~'
 nnoremap <C-f> : NERDTreeFocus<CR>
 nnoremap <C-n> : NERDTree<CR>
 noremap <C-t> : NERDTreeToggle<CR> "ShortKey for NERDTree, here control-t
+
+inoremap {<cr> {<cr>}<c-o>O<tab>
+inoremap [<cr> [<cr>]<c-o>O<tab>
+inoremap (<cr> (<cr>)<c-o>O<tab>
 
 " TagBar config
 nmap <C-v> :TagbarToggle<CR>
